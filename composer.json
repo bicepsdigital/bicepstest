@@ -2,7 +2,8 @@
   "name": "bicepsdigital/bicepstest",
   "keywords": [
     "assertions",
-    "phpunit"
+    "phpunit",
+    "array"
   ],
   "license": "MIT",
   "authors": [
