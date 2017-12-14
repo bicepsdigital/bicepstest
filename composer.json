@@ -13,7 +13,7 @@
       "role": "Developer"
     }
   ],
-  "require-dev": {
+  "require": {
     "phpunit/phpunit": "5.7"
   },
   "autoload": {
