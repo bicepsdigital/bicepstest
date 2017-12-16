@@ -19,7 +19,7 @@ class StringUtils {
 			throw new InvalidArgumentException( 'Length must be lower or equals than 40' );
 		}
 
-		$randomHash = sha1( mktime() . rand( 1, 100000 ) );
+		$randomHash = sha1( time() . rand( 1, 100000 ) );
 
 		return substr( $randomHash, 0, $length );
 	}
