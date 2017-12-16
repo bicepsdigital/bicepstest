@@ -73,15 +73,15 @@ class BicepsAssert extends TestCase {
 		}
 	}
 
-	public static function assertArrayHasExactlyKeys( $from, $to, $message = 'exactly has keys' ) {
-		self::assertArrayEql( array_keys( $from ), array_keys( $to ), $message );
+	public static function assertArrayHasExactlyKeys( $array, $keys, $message = 'exactly has keys' ) {
+		self::assertArrayEql( array_keys( $array ), array_values( $keys ), $message );
 	}
 
 	public static function assertArrayEql( $expected, $actual, $message = "exactly same keys" ) {
 		self::assertEquals( $expected, $actual, $message, $delta = 0.0, $maxDepth = 10, $canonicalize = true );
 	}
 
-	public static function getClassProperties( $className ) {
+	/*public static function getClassProperties( $className ) {
 		$reflectionClass      = new ReflectionClass( $className );
 		$reflectionProperties = $reflectionClass->getProperties();
 
@@ -92,5 +92,5 @@ class BicepsAssert extends TestCase {
 		}
 
 		return $objectProperties;
-	}
+	}*/
 }
